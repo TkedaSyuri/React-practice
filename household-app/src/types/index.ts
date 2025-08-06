@@ -1,0 +1,30 @@
+export type TransactionType = "income" | "expense";
+export type IncomeCategoryType = "給与" | "副収入" | "お小遣い";
+export type ExpenceCategoryType =
+  | "食費"
+  | "日用品"
+  | "住居費"
+  | "交際費"
+  | "娯楽費";
+
+export interface Transaction {
+  id: string;
+  amount: number;
+  category: IncomeCategoryType | ExpenceCategoryType;
+  content: string;
+  date: string
+  type: TransactionType;
+}
+
+ export interface  Balance {
+income: number
+expense: number
+balance: number
+}
+
+export interface CalenderContent {
+  start: string,
+  income: string,
+  expense: string,
+  balance: string
+}
